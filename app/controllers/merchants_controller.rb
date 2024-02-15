@@ -10,8 +10,6 @@ class MerchantsController < ApplicationController
   end
 
   def show
-    # merchant = Merchant.find(params[:id])
-
     conn = Faraday.new(url: "http://localhost:3000/")
 
     response = conn.get("api/v1/merchants/#{params[:id]}/items")

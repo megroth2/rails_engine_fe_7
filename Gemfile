@@ -49,7 +49,6 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem "faraday"
-gem "jsonapi-serializer"
 
 group :test do
   gem "vcr"
