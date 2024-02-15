@@ -20,10 +20,12 @@ class MerchantsController < ApplicationController
   # end
 
   def index
+    @facade = MerchantFacade.new
     @merchants = @facade.get_merchants
   end
 
   def show
+    @facade = MerchantFacade.new(params[:id])
     @items = @facade.get_merchant_items(params[:id])
   end
 end
